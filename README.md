@@ -8,15 +8,15 @@ Azure AD DS Only: there are prerequisites to deploy Azure AD DS in an Azure subs
 
 ### Azure Portal
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjamasten%2FAzure%2Fmaster%2FlandingZone%2Fsolution.json)
-[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjamasten%2FAzure%2Fmaster%2FlandingZone%2Fsolution.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjamasten%2FAzureLandingZones%2Fmain%2Fsolution.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjamasten%2FAzureLandingZones%2Fmain%2Fsolution.json)
 
 ### PowerShell
 
 ````powershell
 New-AzDeployment `
     -Location '<Azure location>' `
-    -TemplateFile 'https://raw.githubusercontent.com/jamasten/Azure/master/landingZone/solution.json' `
+    -TemplateFile 'https://raw.githubusercontent.com/jamasten/AzureLandingZones/main/solution.json' `
     -Verbose
 ````
 
@@ -25,7 +25,7 @@ New-AzDeployment `
 ````cli
 az deployment sub create \
     --location '<Azure location>' \
-    --template-uri 'https://raw.githubusercontent.com/jamasten/Azure/master/landingZone/solution.json'
+    --template-uri 'https://raw.githubusercontent.com/jamasten/AzureLandingZones/main/solution.json'
 ````
 
 ## Description
@@ -49,4 +49,4 @@ The solution will also deploy the following Azure resources:
 
 ## Post Deployment
 
-AD DS Only: while most of the infrastructure is deployed using the templates and scripts, Azure AD Connect cannot be automated.  Since this solution is meant for a lab or development, Azure AD Connect can be installed on the IaaS domain controller.  The directions can be found [here](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express).
+AD DS Only: while most of the infrastructure is deployed using the templates and scripts, Azure AD Connect cannot be automated.  Since this solution is meant for a lab or development, Azure AD Connect can be installed on the IaaS domain controller.  The directions can be found [here](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express).
